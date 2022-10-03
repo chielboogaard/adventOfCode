@@ -4,9 +4,6 @@ def main():
     file = open('data.txt')
     fileData = file.read()
     data = fileData.splitlines()
-
-    # print(fileDataSplit)
-    # data = [1,2,3,4,5]
     
     for number in data:
         current = int(number)
