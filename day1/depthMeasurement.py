@@ -1,6 +1,5 @@
 def main():
     increase = 0
-    previous = 0
 
     file = open('data.txt')
     fileData = file.read()
@@ -11,9 +10,12 @@ def main():
     
     for number in data:
         current = int(number)
-        if previous < current:
-            increase+=1
+        try:
+            if previous < current:
+                increase+=1
+        except:
+            firstnumber = None
         previous = current
-    print(increase -1 )
+    print(increase)
 if __name__ == '__main__':
    main()
